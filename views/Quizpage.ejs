@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/quizpage.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="public/css/quizpage.css"> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add event listener to the logout button
+        document
+          .getElementById("logoutButton")
+          .addEventListener("click", function () {
+            // Navigate to the login page
+            window.location.href = "http://localhost:8080/logout";
+          });
+      });
+
+      function selectOption(optionId) {
+        console.log("Hello im here");
+        // Get the radio button element by optionId
+        var radioButton = document.querySelector(
+          'input[type="radio"][value="' + optionId + '"]'
+        );
+
+        // Check the radio button
+        radioButton.checked = true;
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        // Your script code here
+        console.log("script");
+        function selectOption(optionId) {
+          console.log("Hello im here");
+          // Get the radio button element by optionId
+          var radioButton = document.querySelector(
+            'input[type="radio"][value="' + optionId + '"]'
+          );
+
+          // Check the radio button
+          radioButton.checked = true;
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <!--nav bar-->
+    <nav class="nav-bar">
+      <div class="welcome-message">
+        <img src="img/user.png" alt="" height="60" />
+        <span><%= user %></span>
+      </div>
+
+      <div class="logo">
+        <!-- <img src="https://quizizz.com/wf/assets/62fa6419161d3a641f681ceb_Logo.svg" alt="Logo" width="100" height="60">  -->
+        <img
+          src="img/Screenshot 2023-09-29 152240.png"
+          alt="Logo"
+          width="200"
+        />
+      </div>
+
+      <div class="nav-button">
+        <!-- <form method="get" action="/signup"> -->
+        <!-- <button class="nav-button-left btn" id="signupButton">
+                    Signup
+                </button> -->
+        <!-- </form> -->
+
+        <button class="nav-button-right btn" id="logoutButton">Logout</button>
+      </div>
+    </nav>
+
+    <!--herosection-->
+
+    <div id="quiz-container">
+      <div class="question-page">
+        <h1>Question <%= currentQuestionIndex + 1 %></h1>
+        <p><%= questions[currentQuestionIndex].question_text %></p>
+        <div id="question1-form">
+          <form
+            method="POST"
+            action="/quiz/next"
+            onsubmit="console.log('Form submitted:', this)"
+          >
+            <% options.forEach(option => { %>
+            <div
+              class="answer-box"
+              onclick="selectOption('<%= option.option_id %>')"
+            >
+              <input
+                type="radio"
+                name="selectedOptionId"
+                value="<%= option.option_id %>"
+                id="choice-<%= option.option_id %>"
+              />
+              <label for="choice-a"><%= option.option_text %></label><br />
+            </div>
+            <% }); %>
+
+            <input
+              type="hidden"
+              name="currentQuestionIndex"
+              value="<%= currentQuestionIndex %>"
+            />
+            <input type="hidden" name="quizId" value="<%= quizId %>" />
+
+            <input type="hidden" name="qid" value="<%= qid %>" />
+            <button type="submit">Next</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- heroimagw
+    <div class="image">
+    <img src="C:\Users\deept\OneDrive\Desktop\html tutorial\Untitled design.jpg"> 
+    </div> -->
+
+    <!-- footer 1 -->
+    <footer class="bg-[#23272a] w-full footer-section">
+      <div class="max-w-[1200px] pt-24 pb-10 mx-auto footer-div">
+        <div class="flex flex-row gap-[100px] px-5 footer-inner-div">
+          <!-- left section -->
+          <div class="flex flex-col gap-[24px] w-[20%] footer-left-section">
+            <p
+              class="font-['GintoNord'] font-[800] text-[#5865f2] text-[32px] leading-[30.4px]"
+            >
+              Stay <br />
+              Connected
+            </p>
+
+            <div class="flex text-[24px] text-white gap-7">
+              <img src="img/facebook-icon.svg" alt="" width="30" />
+              <img src="img/instagram-icon.svg" alt="" width="30" />
+              <img src="img/linkedin-icon.svg" alt="" width="30" />
+              <img src="img/twitter-icon.svg" alt="" width="30" />
+            </div>
+          </div>
+
+          <!-- right section -->
+          <div
+            class="w-[75%] flex justify-around flex-wrap footer-right-section"
+          >
+            <div
+              class="text-white font-['ggSans'] w-fit flex flex-col gap-[10px] font-[400]"
+            >
+              <span
+                class="text-[#5865f2] text-[16px] py-10px footer-right-section-title"
+                >Company</span
+              >
+              <p class="hover:underline cursor-pointer">About</p>
+              <p class="hover:underline cursor-pointer">Jobs</p>
+              <!-- <p class="hover:underline cursor-pointer">Branding</p> -->
+              <p class="hover:underline cursor-pointer">Newsroom</p>
+            </div>
+
+            <div
+              class="text-white font-['ggSans'] w-fit flex flex-col gap-[10px] font-[400]"
+            >
+              <span
+                class="text-[#5865f2] text-[16px] py-10px footer-right-section-title"
+                >Resources</span
+              >
+              <p class="hover:underline cursor-pointer">College</p>
+              <p class="hover:underline cursor-pointer">Support</p>
+              <!-- <p class="hover:underline cursor-pointer">Safety</p> -->
+              <p class="hover:underline cursor-pointer">Blog</p>
+              <p class="hover:underline cursor-pointer">Feedback</p>
+              <!-- <p class="hover:underline cursor-pointer">Developers</p> -->
+              <!-- <p class="hover:underline cursor-pointer">Streamkit</p> -->
+              <p class="hover:underline cursor-pointer">Creators</p>
+            </div>
+
+            <div
+              class="text-white font-['ggSans'] w-fit flex flex-col gap-[10px] font-[400]"
+            >
+              <span
+                class="text-[#5865f2] text-[16px] py-10px footer-right-section-title"
+                >Policies</span
+              >
+              <p class="hover:underline cursor-pointer">Terms</p>
+              <p class="hover:underline cursor-pointer">Privacy</p>
+              <p class="hover:underline cursor-pointer">Cookie Settings</p>
+              <p class="hover:underline cursor-pointer">Guidelines</p>
+              <p class="hover:underline cursor-pointer">Acknowledgements</p>
+              <p class="hover:underline cursor-pointer">Licences</p>
+              <p class="hover:underline cursor-pointer">Moderation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- line -->
+        <div class="bg-[#5865f2] w-[100%] h-[2px] mt-9 footer-line"></div>
+
+        <div class="flex flex-row justify-between mt-6 footer-logo">
+          <!-- <img src="Imagess/logo.svg" alt=""> -->
+          <p
+            style="
+              --tw-text-opacity: 1;
+              color: rgb(119 124 133 / var(--tw-text-opacity));
+              text-align: center;
+            "
+          >
+            QuizQuest is optimized for Quizes and Learning. Examples might be
+            simplified to improve learning and Quizes. Tutorials, references,
+            and examples are constantly reviewed to avoid errors, but we cannot
+            warrant full correctness of all content. While using QuizQuest, you
+            agree to have read and accepted our
+            <u>terms of use, cookie and privacy policy</u>..
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="js/quiz-clientside.js"></script> -->
+  </body>
+</html>

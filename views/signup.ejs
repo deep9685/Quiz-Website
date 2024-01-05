@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup-QuizQuest</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- <link type="text/css" src="/Public/Styles/signuppage.css/"> -->
+    <link rel="stylesheet" href="css/signuppage.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Create an account</h2>
+        <form id="registrationForm" method="post" action="http://localhost:8080/signup/register">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Name" autocomplete="given-name" required>
+                <p id="name-error" class="error-message"></p>
+            </div>
+            <div class="form-group">
+                
+                <input type="email" id="email" name="email" placeholder="Email" autocomplete="on" required>
+                <p id="email-error" class="error-message"></p>
+            </div>
+          
+            <div class="password-container">
+                <!-- <input type="password" id="password" name="password" class="password-input" placeholder="Password" autocomplete="off" required> -->
+                <input placeholder="New Password" name="password" type="password" class="password-input" id="password" required/>
+                <i class="fas fa-eye-slash eye-icon" id="togglePassword"></i>
+                <p id="password-error" class="error-message"></p>
+                
+            </div>
+
+            <div class="password-container">
+                <!-- <input type="password" id="confirm-password" class="password-input" placeholder="Confirm Password" required> -->
+                <input placeholder="Confirm Password" name="confirmPassword" type="password" class="password-input" id="confirm-password" required/>
+                <p id="confirm-password-error" class="error-message"></p>
+                <i class="fas fa-eye-slash eye-icon" id="togglePassword2"></i>
+            </div>
+
+            <br>
+            <div class="button-con">
+            <button type="submit" id="signupButton" class="button" >Sign Up</button>
+            </div>
+
+            <div class="login">
+            <p>Already have an account? <a href="http://localhost:8080/login">Log in</a></p>
+            </div>
+            
+            <div class="agree">
+            <p>By continuing, you agree to our Terms of Service and Privacy Policy</p>
+            </div>
+            <br>
+            <div class="gmail">
+                <p>Unable to Login? We are here - </p>
+                <p><bold>quizizz@gmail.com</bold></p>
+            </div>
+        </form>
+    </div>
+    
+    
+    
+    <!-- <script type="text/javascript" src="signup.js"></script> -->
+    
+    <script src="js/signup-clientside.js"></script>
+</body>
+</html>

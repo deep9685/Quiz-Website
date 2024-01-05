@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/home-clientside.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+</head>
+<body>
+       <div class="wrapper">
+
+            <!--NAVBAR-->
+            <nav class="nav-bar">
+                <div class="logo">
+                    <!-- <img src="https://quizizz.com/wf/assets/62fa6419161d3a641f681ceb_Logo.svg" alt="Logo" width="100" height="60">  -->
+                    <img src="img/Screenshot 2023-09-29 152240.png" alt="Logo" width="200">
+                </div>
+    
+                <ul class="nav-items">
+                    <li><a href="http://localhost:8080">Home</a></li>
+                    <li><a href="#Quizzes">Quizzes</a></li>
+                    <!-- <li><a href="#">Signup</a></li> -->
+                    <!-- <li><a href="#">Login</a></li> -->
+                    <li><a href="http://localhost:8080/contact">Contact</a></li>
+                    <li><a href="http://localhost:8080/about">About</a></li>
+                </ul>
+
+                <div class="nav-button ">
+                    <!-- <form method="get" action="/signup"> -->
+                        <button class="nav-button-left btn" id="signupButton">
+                            Signup
+                        </button>
+                    <!-- </form> -->
+                    
+
+                    <button class="nav-button-right btn" id="loginButton">
+                        Login
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Hero section -->
+            <div class="hero-section">
+                <div class="hero-section-left">
+
+                        <div class="hero-section-heading">
+                            Elevate Your Learning Journey with Interactive Quizzes
+                        </div>
+
+                        <div class="hero-section-subheading">
+                            <!-- Unlock Knowledge, Challenge Yourself, and Achieve Mastery -->
+                            Unlock Knowledge,
+                            <span class="role"></span>
+                        </div>
+
+                        <div class="hero-button" id="hero-button">View Quizzes</div>
+
+                </div>
+
+                <div class="hero-section-right">
+                
+                        <img class="absolute" src="img/Hero-section-left.jpg" alt="" width="500" height="500">
+
+                </div>
+            </div>
+           <!--QUIZ BOXES AREA-->
+    
+           <!-- <h2>The Quiz</h2>
+           <p>Each quiz contains 10-20 questions, you get 1 point for each correct answer, at the end of each quiz you get your total score.</p> -->
+    
+        <div class="outer-feature-section" id="Quizzes">
+            <div class="feature-section">
+                <h2 class="feature-heading">Explore Our Featured Quizzes</h2>
+                <div class="small-div"></div>
+
+                <div class="feature-boxes">
+                         <!--Html box-->
+                         <div class="quiz-container" data-quiz-id="1" style="border-bottom-color: rgba(1, 162, 142, 0.39);">
+                                 <img src="img/HTML.png" alt="HTML" width="64" height="62">
+                                 <h2>HTML</h2>
+                                 <p>
+                                    Test your knowledge of Hypertext Markup Language (HTML), the foundational language for creating web pages. Explore HTML tags, structure, and best practices.
+                                </p>
+                         </div>
+
+                         <!--css box-->
+                         <div class="quiz-container" data-quiz-id="2" style="border-bottom-color: rgba(229, 48, 62, 0.39);">
+                            <img src="img/CSS.png" alt="CSS" width="64" height="62">
+                                 <h2>CSS</h2>
+                                 <p>
+                                    Dive into Cascading Style Sheets (CSS) with this quiz. Assess your proficiency in styling web content, including layouts, fonts, and responsive design.
+                                 </p>
+                         </div>
+                         
+
+                         <!--Javascript box-->
+                         <div class="quiz-container" data-quiz-id="3" style="border-bottom-color: rgba(55, 19, 253, 0.39);">
+                            <img src="img/javascript.png" alt="javascript" width="64" height="62">
+                            <h2>JavaScript</h2>
+                            <p>
+                                Challenge yourself with JavaScript, the dynamic scripting language used for web development. Evaluate your skills in functions, DOM manipulation, and event handling
+                            </p>
+                         </div>
+        
+                         <!--Pythob-box-->
+                         <div class="quiz-container" data-quiz-id="4" style="border-bottom-color: rgba(19, 120, 175, 0.39);">
+                            <img src="img/python.png" alt="python" width="64" height="62">
+                            <h2>Python</h2>
+                            <p>
+                                Discover the versatility of Python, a popular high-level programming language. Assess your grasp of Python's syntax, data structures, and scripting capabilities.
+                            </p>
+                         </div>
+    
+                         <!--java-box-->
+                         <div class="quiz-container" data-quiz-id="5" style="border-bottom-color: rgba(26, 158, 253, 0.39);">
+                            <img src="img/java.png" alt="java" width="69" height="67">
+                            <h2>Java</h2>
+                            <p>
+                                Explore the world of Java programming with this quiz. Test your understanding of object-oriented concepts, syntax, and application development.
+                            </p>
+                         </div>
+    
+                         <!--C#-box-->
+                         <div class="quiz-container" data-quiz-id="6" style="border-bottom-color: rgba(249, 113, 21, 0.39);">
+                            <img src="img/csharp.png" alt="csharp" width="64" height="62">
+                            <h2>CSharp</h2>
+                            <p>
+                                Test your knowledge of C#, a robust language for developing Windows applications and web services. Evaluate your proficiency in classes, .NET framework, and more.
+                            </p>
+                         </div>
+                </div>
+
+                <span class="more-button" id="view-more">View More</span>
+            </div>
+        </div>
+                 <!-- <br> -->
+                 <!-- <hr> -->
+    
+                 <!--TESTIMONIAL/REVIEW AREA SECTION-->
+                 <h2 style="text-align: center; font-style: italic; margin-top: 30px;">"Celebrating Student Achievements" </h2>
+                 <section class="testimonial-section">
+                    <div class="testimonial">
+                        <blockquote>
+                            "I can't express how much this educational quiz website has helped me. The quizzes are engaging, and the explanations are clear and concise. It's like having a tutor at my fingertips whenever I need it. I've seen a significant improvement in my understanding of various subjects since I started using this platform."
+                        </blockquote>
+                        <cite>Shweta</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            "Quizzes are helping me ace my exams.Love the interactive quizzes here!"
+                        </blockquote>
+                        <cite>john </cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            "I've found the quizzes on this website to be incredibly helpful in reinforcing what I've learned in my classes. They are well-structured and cover a wide range of topics. Plus, the instant feedback and explanations make it easy to understand and remember the material."
+                        </blockquote>
+                        <cite>Sneha Gupta </cite>
+                    </div>
+                   
+                </section>
+    
+            <br>
+
+
+
+            <!-- footer 1 -->
+            <footer class="bg-[#23272a] w-full footer-section">
+                <div class="max-w-[1200px] pt-24 pb-10 mx-auto footer-div">
+                    <div class="flex flex-row gap-[100px] px-5 footer-inner-div">
+                        <!-- left section -->
+                        <div class="flex flex-col gap-[24px] w-[20%] footer-left-section">
+                            <p class="font-['GintoNord'] font-[800] text-[#5865f2] text-[32px] leading-[30.4px]">
+                                Stay <br>
+                                Connected
+                            </p>
+        
+                            <div class="flex text-[24px] text-white gap-7">
+                                <!-- <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-youtube"></i>
+                                </a> -->
+                                <img src="img/facebook-icon.svg" alt="" width="30">
+                                <img src="img/instagram-icon.svg" alt="" width="30">
+                                <img src="img/linkedin-icon.svg" alt="" width="30">
+                                <img src="img/twitter-icon.svg" alt="" width="30">
+                            </div>
+                        </div>
+        
+                        <!-- right section -->
+                        <div class="w-[75%] flex justify-around flex-wrap footer-right-section">
+        
+                            <div class="text-white font-['ggSans'] w-fit flex flex-col gap-[10px] font-[400]">
+                                <span class="text-[#5865f2] text-[16px] py-10px footer-right-section-title">Company</span>
+                                <p class="hover:underline cursor-pointer">About</p>
+                                <p class="hover:underline cursor-pointer">Jobs</p>
+                                <!-- <p class="hover:underline cursor-pointer">Branding</p> -->
+                                <p class="hover:underline cursor-pointer">Newsroom</p>
+                            </div>
+        
+                            <div class="text-white font-['ggSans'] w-fit flex flex-col gap-[10px] font-[400]">
+                                <span class="text-[#5865f2] text-[16px] py-10px footer-right-section-title">Resources</span>
+                                <p class="hover:underline cursor-pointer">College</p>
+                                <p class="hover:underline cursor-pointer">Support</p>
+                                <!-- <p class="hover:underline cursor-pointer">Safety</p> -->
+                                <p class="hover:underline cursor-pointer">Blog</p>
+                                <p class="hover:underline cursor-pointer">Feedback</p>
+                                <!-- <p class="hover:underline cursor-pointer">Developers</p> -->
+                                <!-- <p class="hover:underline cursor-pointer">Streamkit</p> -->
+                                <p class="hover:underline cursor-pointer">Creators</p>
+                            </div>
+        
+                            <div class="text-white font-['ggSans'] w-fit flex flex-col gap-[10px] font-[400]">
+                                <span class="text-[#5865f2] text-[16px] py-10px footer-right-section-title">Policies</span>
+                                <p class="hover:underline cursor-pointer">Terms</p>
+                                <p class="hover:underline cursor-pointer">Privacy</p>
+                                <p class="hover:underline cursor-pointer">Cookie Settings</p>
+                                <p class="hover:underline cursor-pointer">Guidelines</p>
+                                <p class="hover:underline cursor-pointer">Acknowledgements</p>
+                                <p class="hover:underline cursor-pointer">Licences</p>
+                                <p class="hover:underline cursor-pointer">Moderation</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- line -->
+                    <div class="bg-[#5865f2] w-[100%] h-[2px] mt-9 footer-line"></div>
+        
+                    <div class="flex flex-row justify-between mt-6 footer-logo">
+                        <!-- <img src="Imagess/logo.svg" alt=""> -->
+                        <p style=" --tw-text-opacity: 1;
+                        color: rgb(119 124 133/var(--tw-text-opacity)); text-align: center;">
+                            QuizQuest is optimized for Quizes and Learning. Examples might be simplified to improve learning and Quizes. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using QuizQuest, you agree to have read and accepted our <u>terms of use, cookie and privacy policy</u>..
+                        </p>
+
+                        <!-- <button 
+                        class="text-white bg-[#5865f2] px-[16px] py-[7px] rounded-full leading-[24px] text-[14px] font-[500] hover:bg-[#5865f2] footer-button">
+                            Sign up
+                        </button> -->
+                    </div>
+                </div>
+            </footer>
+       </div>
+
+       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+       <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+       <script>
+         var typeData = new Typed(".role", {
+           strings: [
+             "Challenge Yourself,",
+             "and Achieve Mastery",
+           ],
+           loop: true,
+           typeSpeed: 100,
+           backSpeed: 80,
+           backDelay: 1000,
+         });
+       </script>
+</body>
+</html>
